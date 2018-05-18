@@ -23,3 +23,13 @@ To deactivate the environment after running code:
 ```
 deactivate
 ```
+
+## Relevant papers
+- Measuring immigrant assimilation on Facebook: https://arxiv.org/pdf/1801.09430.pdf
+- Social ties of immigrant communities: https://research.fb.com/wp-content/uploads/2016/11/the-social-ties-of-immigrant-communities-in-the-united-states.pdf
+- Monitoring migrant stock: http://www.zagheni.net/uploads/3/4/4/7/34477700/zagheni_weber_gummadi_2017_accepted_version.pdf
+
+## Resources
+
+- American FactFinder (census data; American Community Survey estimates): https://factfinder.census.gov/
+- 

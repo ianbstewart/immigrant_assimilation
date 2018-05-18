@@ -1,2 +1,7 @@
 Brazil
 Expat
+Los Angeles
+Phoenix
+Chicago
+Houston
+New York
