@@ -19,6 +19,8 @@ def query_spec_data(spec_name, user_ID, access_token):
     while(response is None):
         try:
             response = requests.get(query_URL)
+            ## TODO: handle error codes
+#            if(response.code)
         except Exception, e:
             print('query error\n%s'%(e))
             response = 'NULL'
