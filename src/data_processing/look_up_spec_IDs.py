@@ -15,6 +15,7 @@ def query_spec_data(spec_name, user_ID, access_token):
     spec_data :: spec data (ID, full name, audience, etc.)
     """
     query_URL = 'https://graph.facebook.com/v2.11/act_%s/targetingsearch?access_token=%s&q=%s'%(user_ID, access_token, spec_name)
+#    query_URL = 'https://graph.facebook.com/v2.11/act_%s/search?access_token=%s&q=%s'%(user_ID, access_token, spec_name)
     response = None
     while(response is None):
         try:
@@ -31,14 +32,13 @@ def query_spec_data(spec_name, user_ID, access_token):
         if(response_data.get('data') is not None):
             spec_data_response = response_data['data']
             spec_data = pd.DataFrame(spec_data_response)
-    
     ## add query name for bookkeeping
     spec_data.loc[:, 'query'] = spec_name
     return spec_data
 
 def main():
     parser = ArgumentParser()
-    parser.add_argument('--auth_file', default='data/facebook_auth_ingmar.csv')
+    parser.add_argument('--auth_file', default='data/facebook_auth.csv')
     parser.add_argument('--spec_name_file', default='data/spec_names.txt')
     parser.add_argument('--spec_data_file', default='data/spec_data.tsv')
     args = parser.parse_args()
