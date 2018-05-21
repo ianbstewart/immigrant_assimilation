@@ -1,0 +1,30 @@
+{
+	"name": "New York Zip Codes",
+	"publisher_platforms": ["facebook"],
+	"geo_locations": [
+ 		{"name":"zips","values":[{"key":"US:10075"}],"location_types":["home"],"pySocialWatcherReference" :"10075"},
+		{"name":"zips","values":[{"key":"US:10065"}],"location_types":["home"],"pySocialWatcherReference" :"10065"},
+		{"name":"zips","values":[{"key":"US:10453"}],"location_types":["home"],"pySocialWatcherReference" :"10453"},
+		{"name":"zips","values":[{"key":"US:10457"}],"location_types":["home"],"pySocialWatcherReference" :"10457"},
+		{"name":"zips","values":[{"key":"US:10460"}],"location_types":["home"],"pySocialWatcherReference" :"10460"},
+		{"name":"zips","values":[{"key":"US:10458"}],"location_types":["home"],"pySocialWatcherReference" :"10458"},
+		{"name":"zips","values":[{"key":"US:10467"}],"location_types":["home"],"pySocialWatcherReference" :"10467"},
+		{"name":"zips","values":[{"key":"US:10468"}],"location_types":["home"],"pySocialWatcherReference" :"10468"},
+		{"name":"zips","values":[{"key":"US:10451"}],"location_types":["home"],"pySocialWatcherReference" :"10451"},
+		{"name":"zips","values":[{"key":"US:10452"}],"location_types":["home"],"pySocialWatcherReference" :"10452"}
+		
+	],
+	"behavior": {
+		"access_device": [{
+			"or": [6004384041172],
+			"name": "iOS"
+		}]
+	},
+	"ages_ranges": [{
+			"min": 18,
+			"max": 24
+		}
+	],
+	"genders": [1, 2],
+	"interests": [null]
+}

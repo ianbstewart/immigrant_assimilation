@@ -32,4 +32,4 @@ deactivate
 ## Resources
 
 - American FactFinder (census data; American Community Survey estimates): https://factfinder.census.gov/
-- 
+- Pew Hispanic (census data): http://www.pewhispanic.org/2017/05/03/facts-on-u-s-immigrants-current-data/

@@ -67,7 +67,7 @@ def main():
     spec_datas.drop_duplicates(['id', 'name'], keep='last', inplace=True)
     
     ## write to file
-    spec_datas.to_csv(spec_data_file, sep='\t', index=False)
+    spec_datas.to_csv(spec_data_file, sep='\t', index=False, encoding='utf-8')
     
 if __name__ == '__main__':
 #    print(str(os.path.abspath('.')))

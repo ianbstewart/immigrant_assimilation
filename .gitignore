@@ -3,3 +3,5 @@ data/facebook_auth_ingmar.csv
 data/spec_data.tsv
 data/query_results/
 src/*/*.pyc
+src/*.pyc
+src/*/__pycache__/

@@ -1,0 +1,29 @@
+{   "name": "Hispanic Expats",
+    "behavior": [
+        {"or" : [6003133212372], "name" : "Hispanic (US - All)"},
+        {"not" : [6003133212372], "name" : "Non-Hispanic"}
+    ],
+     "geo_locations" : 
+     [
+        {
+            "name" : "regions",
+            "values" : [
+                {"key" : "3847"}
+            ],
+            "location_types" : ["home"],
+            "country" : "US"
+        },
+        {
+            "name" : "regions",
+            "values" : [
+                {"key" : "3875"}
+            ],
+            "location_types" : ["home"],
+            "country" : "US"
+        }
+     ],
+     "ages_ranges": [
+        {"min":18}
+    ],
+    "genders": [0]
+}
