@@ -5,3 +5,4 @@ data/query_results/
 src/*/*.pyc
 src/*.pyc
 src/*/__pycache__/
+src/*/.ipynb_checkpoints/
