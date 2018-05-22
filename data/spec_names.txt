@@ -7,3 +7,6 @@ Chicago
 Houston
 New York
 Hispanic
+Spanish
+English
+bilingual
