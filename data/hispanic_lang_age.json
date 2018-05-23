@@ -1,8 +1,8 @@
 {   "name": "Hispanic language distributions by age and location",
     "behavior": [
-        {"or" : [6003133212372], "name" : "Hispanic (US - All)"},
         {"or" : [6009609054383], "name" : "Hispanic (US - Bilingual)"},
-        {"or" : [6009609033583], "name" : "Hispanic (US - Spanish dominant)"}
+        {"or" : [6009609033583], "name" : "Hispanic (US - Spanish dominant)"},
+        {"or" : [6009609045383], "name" : "Hispanic (US - English dominant)"}
     ],
      "geo_locations" : 
      [
@@ -416,11 +416,11 @@
         }
      ],
      "ages_ranges": [
-        {"min":13, "max" : 17},
-        {"min":18, "max" : 28},
-        {"min":29, "max" : 38},
-        {"min":39, "max" : 48},
-        {"max":49}
+        {"min":13, "max":17},
+        {"min":18, "max":28},
+        {"min":29, "max":38},
+        {"min":39, "max":48},
+        {"min":13, "max":65}
     ],
     "genders": [0]
 }

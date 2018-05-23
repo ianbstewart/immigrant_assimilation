@@ -14,7 +14,7 @@ def main():
     parser = ArgumentParser()
     parser.add_argument('--auth_file', default='data/facebook_auth.csv')
 #    parser.add_argument('--query_file', default='data/ny_subregions.json')
-#    parser.add_argument('--query_file', default='data/hispanic_expats.json')
+#    parser.add_argument('--query_file', default='data/hispanic_expat_lang_age.json')
     parser.add_argument('--query_file', default='data/hispanic_lang_age.json')
     parser.add_argument('--out_dir', default='data/query_results/')
     args = parser.parse_args()

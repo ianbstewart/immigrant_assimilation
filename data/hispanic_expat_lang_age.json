@@ -1,0 +1,19 @@
+{   "name": "Hispanic ex-pats",
+    "behavior": [
+        {"and" : [6003133212372, 6003277229371], "name" : "Hispanic Mexican Ex-pats"}
+    ],
+     "geo_locations" : 
+     [
+        {
+            "name" : "countries",
+            "location_types" : ["home"],
+            "values" : [
+                "US"
+            ]
+        }
+     ],
+     "ages_ranges": [
+        {"min":18, "max" : 25}
+    ],
+    "genders": [0]
+}
