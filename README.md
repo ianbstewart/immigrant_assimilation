@@ -33,3 +33,10 @@ deactivate
 
 - American FactFinder (census data; American Community Survey estimates): https://factfinder.census.gov/
 - Pew Hispanic (census data): http://www.pewhispanic.org/2017/05/03/facts-on-u-s-immigrants-current-data/
+
+## Progress to date
+
+- Activated and tested access token (src/data_processing/example_mine.py).
+- Mined audience counts for Hispanic people across languages (Spanish/Bilingual/English), age groups (young, middle-aged, old) and states, including the full Hispanic count and only Ex-pats from Mexico (src/data_processing/mine_multiple_locations.py).
+- Compared the Ex-pat estimates with ground-truth census data (src/data_processing/compare_facebook_survey_estimates.ipynb).
+- Compared the relative audience sizes of different age/language groups and found that younger Hispanic Facebook users (13-28) tended to be more bilingual and use less Spanish than older Hispanic users (28+). (src/data_processing/compare_young_old_lang_use.ipynb).
