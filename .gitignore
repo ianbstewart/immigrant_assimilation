@@ -2,6 +2,7 @@ data/facebook_auth.csv
 data/facebook_auth_ingmar.csv
 data/spec_data.tsv
 data/query_results/
+data/all_FB_interests_2016/
 src/*/*.pyc
 src/*.pyc
 src/*/__pycache__/
