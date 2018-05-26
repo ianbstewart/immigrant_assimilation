@@ -1,0 +1,25 @@
+{   "name": "Expats Distribution in New York",
+    "geo_locations": [
+      { 
+        "name": "cities",
+        "values": [{"key":"2490299"}],
+        "location_types": ["home"] 
+      }
+    ],
+    "behavior": [
+        {"or" : [6019673233983], "name" : "Expats (Zimbabwe)"},
+        {"or" : [6027149006383], "name" : "Expats (Vietnam)"},
+        {"or" : [6026404871583], "name" : "Expats (Venezuela)"},
+        {"or" : [6023620475783], "name" : "Expats (US)"},
+        {"or" : [6019396649183], "name" : "Expats (United States)"},
+        {"or" : [6021354152983], "name" : "Expats (UK)"},
+        {"or" : [6019673501783], "name" : "Expats (Uganda)"},
+        {"or" : [6023516430783], "name" : "Expats (UAE)"},
+        {"or" : [6019366994183], "name" : "Expats (Turkey)"}
+    ],
+    "ages_ranges": [
+        {"min":18}
+    ],
+    "genders": [0]
+}
+

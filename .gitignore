@@ -3,8 +3,10 @@ data/facebook_auth_ingmar.csv
 data/spec_data.tsv
 data/query_results/
 data/all_FB_interests_2016/
+data/top_interests_complete.json
 src/*/*.pyc
 src/*.pyc
 src/*/__pycache__/
 src/*/.ipynb_checkpoints/
 dataframe_skeleton*
+dataframe_collecting*
