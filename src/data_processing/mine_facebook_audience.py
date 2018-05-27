@@ -27,21 +27,25 @@ def main():
     extra_auth_files = ['data/facebook_auth_ingmar.csv']
 #    extra_auth_files = ['data/facebook_auth.csv',]*2
     
-    ## optional: remove interest IDs that we've already queried
-    response_file = 'dataframe_collecting_1527334686.csv'
-    responses = pd.read_csv(response_file, index_col=0).fillna(0, inplace=False)
-    responses_valid = responses[responses.loc[:, 'response'] != 0]
-    response_ids = list(set(responses_valid.loc[:, 'interests'].apply(lambda x: literal_eval(x)['or'][0])))
-    queries = json.load(open(query_file))
-    leftover_query = queries.copy()
-    leftover_query['interests'] = [i for i in leftover_query['interests'] if long(i['or'][0]) not in response_ids]
-    tmp_query_file = query_file.replace('.json', '_tmp.json')
+    ## temporary: remove interest IDs that we've already queried
+#    response_file = 'dataframe_collecting_1527334686.csv'
+#    responses = pd.read_csv(response_file, index_col=0).fillna(0, inplace=False)
+#    responses_valid = responses[responses.loc[:, 'response'] != 0]
+#    response_ids = list(set(responses_valid.loc[:, 'interests'].apply(lambda x: literal_eval(x)['or'][0])))
+#    queries = json.load(open(query_file))
+#    leftover_query = queries.copy()
+#    leftover_query['interests'] = [i for i in leftover_query['interests'] if long(i['or'][0]) not in response_ids]
+#    tmp_query_file = query_file.replace('.json', '_tmp.json')
 #    print(tmp_query_file)
-    json.dump(leftover_query, open(tmp_query_file, 'w'), indent=4)
+#    json.dump(leftover_query, open(tmp_query_file, 'w'), indent=4)
     
-    query_and_write(tmp_query_file, out_dir, extra_auth_files=extra_auth_files)
+    query_and_write(query_file, out_dir, extra_auth_files=extra_auth_files)
 #    query_and_write(query_file, out_dir, extra_auth_files=extra_auth_files)
 #    query_and_write(query_file, out_dir, extra_auth_files=extra_auth_files, response_file=response_file)
+    ## TODO: periodically copy response to server 
+    ## so we can tell when something goes
+    ## wrong even if we're not on the same machine
+    ## solution: cronjob
     
 if __name__ == '__main__':
     main()
