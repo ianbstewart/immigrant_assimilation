@@ -45,7 +45,7 @@ def main():
     ## TODO: periodically copy response to server 
     ## so we can tell when something goes
     ## wrong even if we're not on the same machine
-    ## solution: cronjob
+    ## easy implementation: cronjob
     
 if __name__ == '__main__':
     main()

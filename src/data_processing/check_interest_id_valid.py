@@ -100,6 +100,7 @@ def interest_name_query_batch(access_token, user_id, interest_ids):
     interest_names :: FB interest names
     """
     targeting_spec={
+            ## need a dummy geolocation
             "geo_locations" :
                 {
                         "countries":["US"],
@@ -130,6 +131,8 @@ def interest_name_query_batch(access_token, user_id, interest_ids):
     while(not success and query_ctr < MAX_QUERIES):
         try:
             # the official way to call the API
+            # set stream=False to reset connection after request
+            # this might reduce rate limiting => actually hits rate limit immediately
             response = requests.get(header_url, params=params)
             response_json = json.loads(response.text)
             if('error' in response_json):
@@ -173,10 +176,16 @@ def query_test():
 def main():
     parser = ArgumentParser()
     parser.add_argument('--interest_file', default='data/top_interests_complete.json')
+    parser.add_argument('--top_k', type=int, default=3000)
     args = parser.parse_args()
     interest_file = args.interest_file
+    top_k = args.top_k
+    
+    ## load data
+    interest_data = json.load(open(interest_file))['data']
+    interest_data = interest_data[: top_k]
     interest_ids, interest_names = zip(*[(long(i['id']), i['name']) 
-                                         for i in json.load(open(interest_file))['data']])
+                                         for i in interest_data])
     access_token, user_id = load_facebook_auth()
 #    interest_ids = interest_ids[:10]
 #    query_test()
@@ -210,8 +219,9 @@ def main():
     out_file = interest_file.replace('.json', '_names.csv')
     if(os.path.exists(out_file)):
         interest_data = pd.read_csv(out_file, sep=',', index_col=False)
+        interest_ids_mined = set(interest_data.loc[:, 'interest_id'].values)
         interest_id_names = zip(interest_ids, interest_names)
-        interest_ids, interest_names = zip(*filter(lambda x: x[0] not in interest_data.loc[:, 'interest_id'].values, interest_id_names))
+        interest_ids, interest_names = zip(*filter(lambda x: x[0] not in interest_ids_mined, interest_id_names))
     interest_data_cols = ['interest_id', 'interest_name']
     batches = int(math.ceil(len(interest_ids) / batch_size))
     write_ctr = 5
@@ -219,10 +229,18 @@ def main():
         interest_ids_i = interest_ids[i*batch_size:(i+1)*batch_size]
         interest_names_i = interest_names[i*batch_size:(i+1)*batch_size]
         response_names_i = interest_name_query_batch(access_token, user_id, interest_ids_i)
-        fixed_names_i = ['NA' if x not in set(interest_names_i) else x for x in response_names_i]
+        if(len(response_names_i) < interest_names_i):
+            fixed_names_i = ['NA' if x not in set(response_names_i) else x for x in interest_names_i]
+        else:
+            fixed_names_i = list(interest_names_i)
+#        print('%d/%d fixed names %s'%(len(response_names_i), len(interest_names_i), fixed_names_i))
+        ## check for missing names
+#        if(len(response_names_i) != len(fixed_names_i) or any([name_i=='' for name_i in response_names_i])):
+#            print('response names have null values: %s'%(','.join(response_names_i)))
         interest_data_i = pd.DataFrame([interest_ids_i, fixed_names_i], index=interest_data_cols).transpose()
         interest_data = interest_data.append(interest_data_i)
         if(i % write_ctr == 0):
+            print('writing %d interests total'%(interest_data.shape[0]))
             interest_data.to_csv(out_file, sep=',', index=False, encoding='utf-8')
         if(i % 10 == 0):
             print('processed %d interests'%(batch_size*(i+1)))
