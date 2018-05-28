@@ -1,0 +1,24 @@
+{
+	"name" : "Hispanic Mexican Ex-Pats interests",
+	"behavior": [
+        {"or" : [6003133212372], "and" : [6023676072183], "name" : "Hispanic (All) AND Ex-pats (Mexico)"}
+    ],
+	"geo_locations": [
+        {
+            "location_types": [
+                "home"
+            ], 
+            "name": "countries", 
+            "values": [
+                "US"
+            ]
+        }
+    ],
+    "ages_ranges": [
+        {
+            "max": 65, 
+            "min": 18
+        }
+    ],
+    "genders":[0]
+}
