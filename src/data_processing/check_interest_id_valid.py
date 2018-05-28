@@ -13,6 +13,7 @@ import pandas as pd
 import logging
 import os
 import math
+import sys
 
 ## suppress request INFO messages
 logging.getLogger("requests").setLevel(logging.WARNING)
@@ -142,6 +143,8 @@ def interest_name_query_batch(access_token, user_id, interest_ids):
                     print('rate limit reached at id=%d, sleeping for %d seconds'%(interest_id, RATE_LIMIT_SLEEP_TIME))
                     sleep(RATE_LIMIT_SLEEP_TIME)
                     success = True
+                    ## try to restart program to dodge rate limit
+#                    os.execl(sys.executable, sys.executable, *sys.argv)
             else:
                 response_data = response_json['targetingsentencelines']
                 response_data_matches = filter(lambda x: x['content']=='People Who Match:' or x['content']=='And Must Also Match:', 
@@ -232,7 +235,7 @@ def main():
         if(len(response_names_i) < interest_names_i):
             fixed_names_i = ['NA' if x not in set(response_names_i) else x for x in interest_names_i]
         else:
-            fixed_names_i = list(interest_names_i)
+            fixed_names_i = list(response_names_i)
 #        print('%d/%d fixed names %s'%(len(response_names_i), len(interest_names_i), fixed_names_i))
         ## check for missing names
 #        if(len(response_names_i) != len(fixed_names_i) or any([name_i=='' for name_i in response_names_i])):

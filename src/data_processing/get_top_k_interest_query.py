@@ -11,8 +11,8 @@ import pandas as pd
 def main():
     parser = ArgumentParser()
 #    parser.add_argument('--interest_count_file', default='data/all_FB_interests_2016/all_FB_interests_2016.csv')
-    parser.add_argument('--interest_sorted_file', default='data/top_interests_complete.json')
-    parser.add_argument('--query_file', default='data/queries/US_MX_native_interests.json')
+    parser.add_argument('--interest_sorted_file', default='data/top_interests_complete_clean.json')
+    parser.add_argument('--query_file', default='data/queries/hispanic_MX_expats.json')
     parser.add_argument('--top_k', default=3000)
     args = parser.parse_args()
 #    interest_count_file = args.interest_count_file
@@ -38,7 +38,6 @@ def main():
     
     ## write
     out_file = query_file.replace('.json', '_top_%d_interest.json'%(top_k))
-    print(out_file)
     json.dump(query, open(out_file, 'w'), indent=4, encoding='latin1')
     
 if __name__ == '__main__':
