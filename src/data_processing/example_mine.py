@@ -1,5 +1,6 @@
 from argparse import ArgumentParser
 from pysocialwatcher import watcherAPI
+from pysocialwatcher.constants import TOKENS
 import os
 import re
 
@@ -18,7 +19,8 @@ def query_facebook_audience(access_token, user_id, query_file):
     response :: DataFrame with query response(s) => one response per row
     """
     watcher = watcherAPI()
-    watcher.add_token_and_account_number(access_token, user_id)
+    if((access_token, user_id) not in TOKENS):
+        watcher.add_token_and_account_number(access_token, user_id)
     
     ## execute data collection
     response = watcher.run_data_collection(query_file)
@@ -90,12 +92,12 @@ def query_facebook_audience(access_token, user_id, query_file):
 def main():
     parser = ArgumentParser()
     parser.add_argument('--auth_file', default='data/facebook_auth_ingmar.csv')
-    parser.add_argument('--query_file', default='data/newyork_expats.json')
+    parser.add_argument('--query_file', default='data/queries/newyork_expats.json')
     parser.add_argument('--out_dir', default='data/')
     args = parser.parse_args()
     auth_file = args.auth_file
     query_file = args.query_file
-    out_dir = args.out_dir    
+    out_dir = args.out_dir
     
     ## set up watcher
     watcher = watcherAPI()

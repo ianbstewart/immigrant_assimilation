@@ -5,11 +5,11 @@ Mine Facebook for a given query's audience (daily and monthly).
 @author: stewart
 """
 from argparse import ArgumentParser
-from src.data_processing.utils import query_and_write, load_facebook_auth
-from pysocialwatcher import constants
-import pandas as pd
-import json
-from ast import literal_eval
+from src.data_processing.utils import query_and_write
+#from pysocialwatcher import constants
+#import pandas as pd
+#import json
+#from ast import literal_eval
 
 def main():
     parser = ArgumentParser()
