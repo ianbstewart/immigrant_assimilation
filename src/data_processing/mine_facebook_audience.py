@@ -27,9 +27,9 @@ def main():
     out_dir = args.out_dir
     response_file = args.response_file
     
-    ## TEST: try multiple queries at once
-    extra_auth_files = []
-#    extra_auth_files = ['data/facebook_auth_ingmar.csv', 'data/facebook_auth_koustuv.csv']
+    ## optional: multiple queries at once
+#    extra_auth_files = []
+    extra_auth_files = ['data/facebook_auth_ingmar.csv', 'data/facebook_auth_koustuv.csv']
     
     ## temporary: remove interest IDs that we've already queried
 #    response_file = 'dataframe_collecting_1527334686.csv'
