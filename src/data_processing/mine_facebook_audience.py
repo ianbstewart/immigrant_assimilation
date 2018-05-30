@@ -18,8 +18,8 @@ def main():
 #    parser.add_argument('--query_file', default='data/hispanic_lang_age.json')
 #    parser.add_argument('--query_file', default='data/US_MX_native_interests.json')
 #    parser.add_argument('--query_file', default='data/queries/US_MX_native_interests_top_3000_interest_new.json')
-    parser.add_argument('--query_file', default='data/queries/hispanic_MX_expats_top_3000_interest.json')
-    parser.add_argument('--interest_file', default='data/top_interests_complete_names.csv')
+    parser.add_argument('--query_file', default='data/queries/hispanic_MX_expats_ages_top_3000_interest.json')
+#    parser.add_argument('--interest_file', default='data/top_interests_complete_names.csv')
     parser.add_argument('--out_dir', default='data/query_results/')
     parser.add_argument('--response_file', default=None)
     args = parser.parse_args()
@@ -28,7 +28,8 @@ def main():
     response_file = args.response_file
     
     ## TEST: try multiple queries at once
-    extra_auth_files = ['data/facebook_auth_ingmar.csv']
+    extra_auth_files = []
+#    extra_auth_files = ['data/facebook_auth_ingmar.csv', 'data/facebook_auth_koustuv.csv']
     
     ## temporary: remove interest IDs that we've already queried
 #    response_file = 'dataframe_collecting_1527334686.csv'
