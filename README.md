@@ -46,10 +46,10 @@ deactivate
 - Mined audience counts for Hispanic people across languages (Spanish/Bilingual/English), age groups (young, middle-aged, old) and states, including the full Hispanic count and only Ex-pats from Mexico (src/data_processing/mine_multiple_locations.py).
 - Compared the Ex-pat estimates with ground-truth census data (src/data_processing/compare_facebook_survey_estimates.ipynb).
 - Compared the relative audience sizes of different age/language groups and found that younger Hispanic Facebook users (13-28) tended to be more bilingual and use less Spanish than older Hispanic users (28+). (src/data_processing/compare_young_old_lang_use.ipynb).
-- Using correlation in interest percentages, found that Hispanic Ex-pats from Mexico are closer to American interests than to Mexican interests (src/data_processing/compare_facebook_survey_estimates.ipynb).
+- Computed correlation in interest percentages and found that Hispanic Ex-pats from Mexico are closer to American interests than to Mexican interests (src/data_processing/compare_facebook_survey_estimates.ipynb): metrics include Pearson's correlation, paired t-test, and KL divergence.
 
 ## TODO
 
 - Figure out MPI policy on funding for survey deployment.
 - Assess Turk Prime as a platform for survey deployment (alternative to Facebook, in case of funding problems): how much representation of Hispanic people?
-- Determine top-1000 most popular American interests; filter manually to pick out those most likely to be related to assimilation (e.g. music).
+- Filter interests to pick out those most likely to be related to assimilation (e.g. music).
