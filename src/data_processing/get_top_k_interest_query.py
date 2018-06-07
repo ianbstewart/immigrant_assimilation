@@ -30,6 +30,7 @@ def main():
     
     ## cut off at top-k
 #    interest_counts.sort_values('audience_size', inplace=True, ascending=False)
+    top_k = max(top_k, interests.shape[0])
     interests_k = interests.head(n=top_k)
     
     ## update query

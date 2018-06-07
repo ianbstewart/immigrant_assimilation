@@ -18,7 +18,7 @@ def mine_suggestions(suggestion_data, max_suggestions=2000):
 
 def main():
     parser = ArgumentParser()
-    parser.add_argument('--suggestion_file', default='data/suggestions.csv')
+    parser.add_argument('--suggestion_file', default='data/FB_suggestion_queries.csv')
     parser.add_argument('--max_suggestions', default=2000)
     args = parser.parse_args()
     suggestion_file = args.suggestion_file
