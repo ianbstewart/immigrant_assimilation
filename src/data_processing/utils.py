@@ -23,9 +23,11 @@ def query_facebook_audience(access_token, user_id, query_file, extra_auth_data=[
     response :: DataFrame with query response(s) => one response per row
     """
     watcher = watcherAPI()
-    watcher.add_token_and_account_number(access_token, user_id)
+    if(not (access_token, user_id) in TOKENS):
+        watcher.add_token_and_account_number(access_token, user_id)
     for (access_token_i, user_id_i) in extra_auth_data:
-        watcher.add_token_and_account_number(access_token_i, user_id_i)
+        if(not (access_token_i, user_id_i) in TOKENS):
+            watcher.add_token_and_account_number(access_token_i, user_id_i)
     print('%d FB tokens'%(len(TOKENS)))
     
     ## execute data collection

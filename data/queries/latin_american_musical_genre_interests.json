@@ -1,0 +1,392 @@
+{
+    "data": [
+        {
+            "name": "Flamenco", 
+            "id": "6003074062797"
+        }, 
+        {
+            "name": "Mexican cumbia", 
+            "id": "6003497930280"
+        }, 
+        {
+            "name": "Mexican rock music", 
+            "id": "6002971551929"
+        }, 
+        {
+            "name": "Tango music", 
+            "id": "6009909180927"
+        }, 
+        {
+            "name": "Reggae en Espa\u00cc\u00b1ol", 
+            "id": "6003364047823"
+        }, 
+        {
+            "name": "Zouk", 
+            "id": "6003169339149"
+        }, 
+        {
+            "name": "Brega (music)", 
+            "id": "6003463723544"
+        }, 
+        {
+            "name": "Funk ostenta\u00cc\u00a4\u00cc\u00a3o", 
+            "id": "6016917656327"
+        }, 
+        {
+            "name": "Samba-enredo", 
+            "id": "6003541789765"
+        }, 
+        {
+            "name": "Huapango", 
+            "id": "6003420589431"
+        }, 
+        {
+            "name": "Argentine cumbia", 
+            "id": "6003985876266"
+        }, 
+        {
+            "name": "Sambass", 
+            "id": "6003352340000"
+        }, 
+        {
+            "name": "Rumba (dance)", 
+            "id": "6003234292967"
+        }, 
+        {
+            "name": "Deejay (Jamaican)", 
+            "id": "6004933825545"
+        }, 
+        {
+            "name": "Chicano rap", 
+            "id": "6004108615609"
+        }, 
+        {
+            "name": "Latin jazz", 
+            "id": "6004111763189"
+        }, 
+        {
+            "name": "Cadence rampa", 
+            "id": "6003325356199"
+        }, 
+        {
+            "name": "Rumba", 
+            "id": "6004056024148"
+        }, 
+        {
+            "name": "Cuban rumba", 
+            "id": "718607324904571"
+        }, 
+        {
+            "name": "Argentine tango", 
+            "id": "6003226791885"
+        }, 
+        {
+            "name": "Afro-Cuban jazz", 
+            "id": "6003254226816"
+        }, 
+        {
+            "name": "Regional Mexican", 
+            "id": "6003250320511"
+        }, 
+        {
+            "name": "Narcocorrido", 
+            "id": "6003215714124"
+        }, 
+        {
+            "name": "Music of Brazil", 
+            "id": "6002933742373"
+        }, 
+        {
+            "name": "Son Huasteco", 
+            "id": "6003343186056"
+        }, 
+        {
+            "name": "Nueva canci\u00cc_n", 
+            "id": "6003058651132"
+        }, 
+        {
+            "name": "Argentine rock", 
+            "id": "6003244360401"
+        }, 
+        {
+            "name": "Reggae rock", 
+            "id": "6004615176296"
+        }, 
+        {
+            "name": "Latin ballad", 
+            "id": "6003628897324"
+        }, 
+        {
+            "name": "Riddim", 
+            "id": "6003157650884"
+        }, 
+        {
+            "name": "Choro", 
+            "id": "6003287919141"
+        }, 
+        {
+            "name": "Andean music", 
+            "id": "6003030856207"
+        }, 
+        {
+            "name": "musica cristiana", 
+            "id": "6003193627562"
+        }, 
+        {
+            "name": "Nueva trova", 
+            "id": "6003173276578"
+        }, 
+        {
+            "name": "Duranguense", 
+            "id": "6003288662251"
+        }, 
+        {
+            "name": "Cumbia villera", 
+            "id": "6002910067372"
+        }, 
+        {
+            "name": "Cuarteto", 
+            "id": "6003120234258"
+        }, 
+        {
+            "name": "Salsa rom\u00cc\u00c1ntica", 
+            "id": "6003309367514"
+        }, 
+        {
+            "name": "Music of Cuba", 
+            "id": "6002990758259"
+        }, 
+        {
+            "name": "Jarocho", 
+            "id": "6003319591191"
+        }, 
+        {
+            "name": "Cajun music", 
+            "id": "6003098130058"
+        }, 
+        {
+            "name": "Zamba (artform)", 
+            "id": "6003067561244"
+        }, 
+        {
+            "name": "Zydeco", 
+            "id": "6003122005722"
+        }, 
+        {
+            "name": "Latin hip hop", 
+            "id": "6003348819605"
+        }, 
+        {
+            "name": "Coco (music)", 
+            "id": "6004055611496"
+        }, 
+        {
+            "name": "Peruvian cumbia", 
+            "id": "6003686938107"
+        }, 
+        {
+            "name": "Jota (music)", 
+            "id": "6003361836545"
+        }, 
+        {
+            "name": "Danz\u00cc_n", 
+            "id": "6003357163804"
+        }, 
+        {
+            "name": "Charanga (Cuba)", 
+            "id": "6005417518875"
+        }, 
+        {
+            "name": "Chumba", 
+            "id": "6003029713207"
+        }, 
+        {
+            "name": "Habanera (music)", 
+            "id": "6003123158592"
+        }, 
+        {
+            "name": "Brazilian hip hop", 
+            "id": "6003232565733"
+        }, 
+        {
+            "name": "Rock en espa\u00cc\u00b1ol", 
+            "id": "6003123296349"
+        }, 
+        {
+            "name": "Tecnocumbia", 
+            "id": "6003307934745"
+        }, 
+        {
+            "name": "Cadence-lypso", 
+            "id": "6003319677991"
+        }, 
+        {
+            "name": "musica llanera", 
+            "id": "6003147800026"
+        }, 
+        {
+            "name": "Chutney Soca", 
+            "id": "6003050235616"
+        }, 
+        {
+            "name": "Punto guajiro", 
+            "id": "6003228725499"
+        }, 
+        {
+            "name": "Boi (music)", 
+            "id": "6003374885777"
+        }, 
+        {
+            "name": "Son Jarocho", 
+            "id": "6003183763212"
+        }, 
+        {
+            "name": "Latin soul", 
+            "id": "6002902932910"
+        }, 
+        {
+            "name": "Merengue t\u00cc_pico", 
+            "id": "6003159897382"
+        }, 
+        {
+            "name": "Huayno", 
+            "id": "6003396678823"
+        }, 
+        {
+            "name": "Gwo ka", 
+            "id": "6003360803187"
+        }, 
+        {
+            "name": "Music of Ecuador", 
+            "id": "6003148849045"
+        }, 
+        {
+            "name": "Abwe", 
+            "id": "6003075586115"
+        }, 
+        {
+            "name": "Cuban Rumba", 
+            "id": "6003446438080"
+        }, 
+        {
+            "name": "Latin American music", 
+            "id": "6003003434573"
+        }, 
+        {
+            "name": "Bachata (music)", 
+            "id": "6003143764440"
+        }, 
+        {
+            "name": "Salsa music", 
+            "id": "6003668231507"
+        }, 
+        {
+            "name": "Calypso music", 
+            "id": "6003137134500"
+        }, 
+        {
+            "name": "Merengue music", 
+            "id": "6003332917632"
+        }, 
+        {
+            "name": "Cha-cha-cha (music)", 
+            "id": "6003647048620"
+        }, 
+        {
+            "name": "Mexican pop music", 
+            "id": "6002950184974"
+        }, 
+        {
+            "name": "Banda (music)", 
+            "id": "6003288085327"
+        }, 
+        {
+            "name": "Norte\u00cc\u00b1o (music)", 
+            "id": "6003255897001"
+        }, 
+        {
+            "name": "Mambo (music)", 
+            "id": "6003869469960"
+        }, 
+        {
+            "name": "Son (music)", 
+            "id": "6002997912850"
+        }, 
+        {
+            "name": "Tejano music", 
+            "id": "6003324073606"
+        }, 
+        {
+            "name": "Regional styles of Mexican music", 
+            "id": "6003248641601"
+        }, 
+        {
+            "name": "Pagode (music)", 
+            "id": "6005130240209"
+        }, 
+        {
+            "name": "Reggaeton", 
+            "id": "6003434636451"
+        }, 
+        {
+            "name": "Samba", 
+            "id": "6003302709853"
+        }, 
+        {
+            "name": "Ranchera", 
+            "id": "6002957429850"
+        }, 
+        {
+            "name": "Mariachi", 
+            "id": "6003281529097"
+        }, 
+        {
+            "name": "Cumbia", 
+            "id": "6003359723621"
+        }, 
+        {
+            "name": "Bolero", 
+            "id": "6003310836308"
+        }, 
+        {
+            "name": "Bossa nova", 
+            "id": "6003362445587"
+        }, 
+        {
+            "name": "Brazilian rock", 
+            "id": "6003001993292"
+        }, 
+        {
+            "name": "Funk carioca", 
+            "id": "6003432194483"
+        }, 
+        {
+            "name": "Bomba (Puerto Rico)", 
+            "id": "6010678010155"
+        }, 
+        {
+            "name": "Son montuno", 
+            "id": "6003142697661"
+        }, 
+        {
+            "name": "Guaracha", 
+            "id": "6003538498427"
+        }, 
+        {
+            "name": "Corrido", 
+            "id": "6002957119523"
+        }, 
+        {
+            "name": "Vallenato", 
+            "id": "6003159960615"
+        }, 
+        {
+            "name": "Conjunto", 
+            "id": "6003059966756"
+        }, 
+        {
+            "name": "Rondalla", 
+            "id": "6003398685730"
+        }
+    ]
+}

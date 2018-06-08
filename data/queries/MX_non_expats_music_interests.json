@@ -5860,7 +5860,7 @@
     "geo_locations": [
         {
             "values": [
-                "US"
+                "MX"
             ], 
             "location_types": [
                 "home"
@@ -5868,17 +5868,8 @@
             "name": "countries"
         }
     ], 
-    "name": "Hispanic Mexican Ex-pats and non-Expats Musical Interests", 
+    "name": "Mexican Non-Expats Music Interests", 
     "behavior": [
-        {
-            "and": [
-                6023676072183
-            ], 
-            "or": [
-                6003133212372
-            ], 
-            "name": "Hispanic (All) AND Ex-pats (Mexico)"
-        }, 
         {
             "not": [
                 6015559470583, 

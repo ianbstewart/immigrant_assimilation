@@ -42,14 +42,15 @@ deactivate
 
 ## Progress to date
 
-- Activated and tested access token (src/data_processing/example_mine.py).
-- Mined audience counts for Hispanic people across languages (Spanish/Bilingual/English), age groups (young, middle-aged, old) and states, including the full Hispanic count and only Ex-pats from Mexico (src/data_processing/mine_multiple_locations.py).
-- Compared the Ex-pat estimates with ground-truth census data (src/data_processing/compare_facebook_survey_estimates.ipynb).
-- Compared the relative audience sizes of different age/language groups and found that younger Hispanic Facebook users (13-28) tended to be more bilingual and use less Spanish than older Hispanic users (28+). (src/data_processing/compare_young_old_lang_use.ipynb).
-- Computed correlation in interest percentages and found that Hispanic Ex-pats from Mexico are closer to American interests than to Mexican interests (src/data_processing/compare_facebook_survey_estimates.ipynb): metrics include Pearson's correlation, paired t-test, and KL divergence.
+- Activated and tested access token (`src/data_processing/example_mine.py`).
+- Mined audience counts for Hispanic people across languages (Spanish/Bilingual/English), age groups (young, middle-aged, old) and states, including the full Hispanic count and only Ex-pats from Mexico (`src/data_processing/mine_multiple_locations.py`).
+- Compared the Ex-pat estimates with ground-truth census data (`src/data_processing/compare_facebook_survey_estimates.ipynb`).
+- Compared the relative audience sizes of different age/language groups and found that younger Hispanic Facebook users (13-28) tended to be more bilingual and use less Spanish than older Hispanic users (28+). (`src/data_processing/compare_young_old_lang_use.ipynb`).
+- Computed correlation in interest percentages and found that Hispanic Ex-pats from Mexico are closer to American interests than to Mexican interests (`src/data_processing/compare_facebook_survey_estimates.ipynb`): metrics include Pearson's correlation, paired t-test, and KL divergence.
+- Extracted all interests related to music (`src/data_processing/extract_musical_interests.ipynb`)
 
 ## TODO
 
+- Query for audience counts on music interests for (1) US Hispanic Mexican Expats and (2) US non-Expats. (7/6/18)
 - Figure out MPI policy on funding for survey deployment.
 - Assess Turk Prime as a platform for survey deployment (alternative to Facebook, in case of funding problems): how much representation of Hispanic people?
-- Filter interests to pick out those most likely to be related to assimilation (e.g. music).
