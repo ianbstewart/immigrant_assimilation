@@ -53,9 +53,18 @@ def load_facebook_auth(auth_file='data/facebook_auth.csv'):
     
     access_token :: Access token.
     user_id :: User ID.
+    app_id :: App ID.
+    app_secret :: Secret app ID.
     """
-    access_token, user_id = list(open(auth_file))[0].strip().split(',')
-    return access_token, user_id
+    auth_data = list(open(auth_file))[0].strip().split(',')
+    if(len(auth_data) == 2):
+        access_token, user_id = auth_data
+        app_id = None
+        app_secret = None
+    elif(len(auth_data) == 4):
+        access_token, user_id, app_id, app_secret = auth_data
+#    access_token, user_id = list(open(auth_file))[0].strip().split(',')[:2]
+    return access_token, user_id, app_id, app_secret
 
 def query_and_write(query_file, out_dir, extra_auth_files=[], response_file=None):
     """
@@ -67,11 +76,11 @@ def query_and_write(query_file, out_dir, extra_auth_files=[], response_file=None
     extra_auth_files :: Extra FB auth data files.
     response_file :: Name of existing response file, if needed.
     """
-    access_token, user_id = load_facebook_auth()
+    access_token, user_id, _, _ = load_facebook_auth()
     query_base = os.path.basename(query_file).replace('.json', '')
     
     ## issue query
-    extra_auth_data = [load_facebook_auth(auth_file=f) for f in extra_auth_files]
+    extra_auth_data = [load_facebook_auth(auth_file=f)[:2] for f in extra_auth_files]
     results = query_facebook_audience(access_token, user_id, query_file, extra_auth_data=extra_auth_data, response_file=response_file)
     
     ## clean up JSON cols
